@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!-- saved from url=(0093)file:///C:/Users/Nourh/Desktop/gh.wissem/Daily-sport-plus/client/public/daily-sport-plus.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>daily sport+</title>
+  <style>
+    :root{
+      --bg1:#061430;
+      --bg2:#07294a;
+      --accent:#ffd400;
+      --card:#0d2a3f;
+      --glass: rgba(255,255,255,0.04);
+    }
+    html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:#eaf6ff}
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 32px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(180deg,var(--accent),#ff8a00);display:flex;align-items:center;justify-content:center;color:#051022;font-weight:800;font-size:18px}
+    h1{margin:0;font-size:20px;letter-spacing:0.6px}
+    p.lead{margin:4px 0 0;font-size:13px;opacity:0.85}
+
+    main{padding:20px 32px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .panel{background:linear-gradient(180deg,rgba(255,255,255,0.02),var(--glass));border-radius:12px;padding:14px;box-shadow:0 6px 20px rgba(2,8,23,0.6);min-height:420px;display:flex;flex-direction:column}
+    .panel h2{margin:0 0 8px;font-size:18px}
+    .map-wrap{flex:1;display:flex;gap:12px;align-items:stretch}
+    .map{flex:1;background:transparent;border-radius:8px;padding:12px;display:flex;align-items:center;justify-content:center}
+    svg{width:100%;height:100%;max-height:360px}
+    .info{width:300px;background:rgba(0,0,0,0.18);padding:12px;border-radius:10px;color:#f8fbff}
+    .info h3{margin:0 0 6px;font-size:16px}
+    .league{background:rgba(255,255,255,0.03);padding:8px;margin:6px 0;border-radius:6px;font-size:14px;display:block;text-decoration:none;color:#f8fbff;transition:all .2s ease;border-left:3px solid transparent}
+    .league:hover{background:rgba(255,255,255,0.08);border-left-color:var(--accent);transform:translateX(4px)}
+
+    .region{fill:#183a5a;stroke:#0c1f2b;stroke-width:1;cursor:pointer;transition:all .18s ease}
+    .region:hover{filter:brightness(1.22);transform:scale(1.01)}
+    .region.active{fill:var(--accent);stroke:#332500}
+
+    footer{padding:18px 32px;color:#9fc7ff;font-size:13px}
+
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .info{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">ds+</div>
+      <div>
+        <h1>daily sport+</h1>
+        <p class="lead">Interactive European &amp; African football overview</p>
+      </div>
+    </div>
+    <div style="opacity:.9;font-size:13px">Theme: Dynamic Football · 2026</div>
+  </header>
+
+  <main>
+    <div class="grid">
+      <!-- Europe Panel -->
+      <section class="panel" id="europe-panel">
+        <h2>European Football</h2>
+        <div class="map-wrap">
+          <div class="map">
+            <!-- Simplified Europe-ish SVG -->
+            <svg viewBox="0 0 320 220" aria-label="Map of Europe">
+              <g id="europe">
+                <path class="region" data-name="United Kingdom" d="M40 40 L70 30 L90 42 L85 62 L65 72 L45 60 Z"></path>
+                <path class="region" data-name="Iberia" d="M20 110 L55 100 L70 118 L50 140 L30 128 Z"></path>
+                <path class="region" data-name="France" d="M70 100 L110 92 L120 110 L95 130 L75 118 Z"></path>
+                <path class="region" data-name="Germany" d="M120 70 L150 62 L170 84 L150 100 L125 92 Z"></path>
+                <path class="region" data-name="Italy" d="M170 120 L190 100 L205 120 L190 140 Z"></path>
+                <path class="region" data-name="Scandinavia" d="M140 10 L160 6 L178 24 L160 38 L138 26 Z"></path>
+              </g>
+            </svg>
+          </div>
+          <aside class="info" id="europe-info">
+            <h3>Select a country</h3>
+            <div id="europe-list">Click a highlighted region to see top leagues.</div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Africa Panel -->
+      <section class="panel" id="africa-panel">
+        <h2>African Football</h2>
+        <div class="map-wrap">
+          <div class="map">
+            <!-- Simplified Africa-ish SVG -->
+            <svg viewBox="0 0 320 320" aria-label="Map of Africa">
+              <g id="africa">
+                <path class="region" data-name="North Africa" d="M120 20 L180 16 L215 40 L190 76 L140 68 Z"></path>
+                <path class="region" data-name="West Africa" d="M50 120 L110 110 L125 150 L80 170 L45 150 Z"></path>
+                <path class="region" data-name="East Africa" d="M200 140 L240 130 L260 160 L230 190 L200 170 Z"></path>
+                <path class="region" data-name="Southern Africa" d="M140 220 L180 210 L220 250 L160 292 L120 260 Z"></path>
+                <path class="region" data-name="Central Africa" d="M120 150 L160 140 L180 170 L150 190 L120 170 Z"></path>
+              </g>
+            </svg>
+          </div>
+          <aside class="info" id="africa-info">
+            <h3>Select a region</h3>
+            <div id="africa-list">Click a highlighted region to see top leagues.</div>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    Tip: Hover regions and click to pin a selection. This is a demo layout — replace shapes with detailed SVGs for accuracy.
+  </footer>
+
+  <script>
+    // sample league data
+    const europeLeagues = {
+      'United Kingdom': ['Premier League', 'English Championship'],
+      'Iberia': ['La Liga (Spain)', 'Primeira Liga (Portugal)'],
+      'France': ['Ligue 1'],
+      'Germany': ['Bundesliga'],
+      'Italy': ['Serie A'],
+      'Scandinavia': ['Allsvenskan (Sweden)', 'Eliteserien (Norway)']
+    }
+    const africaLeagues = {
+      'North Africa': ['Botola (Morocco)', 'Egyptian Premier League', 'Tunisian Ligue 1'],
+      'West Africa': ['Ghana Premier League', 'Nigerian Premier League'],
+      'East Africa': ['Kenyan Premier League', 'Tanzanian Premier League'],
+      'Southern Africa': ['South African Premier Division', 'Zimbabwe Premier Soccer League'],
+      'Central Africa': ['Cameroon Elite One']
+    }
+
+    function attach(panelId, data, infoId){
+      const panel = document.getElementById(panelId);
+      const svg = panel.querySelector('svg');
+      const info = document.getElementById(infoId);
+
+      svg.querySelectorAll('.region').forEach(node=>{
+        node.addEventListener('mouseenter', ()=>{
+          node.style.filter='drop-shadow(0 6px 8px rgba(0,0,0,0.6))';
+        })
+        node.addEventListener('mouseleave', ()=>{ node.style.filter='none' })
+
+        node.addEventListener('click', ()=>{
+          // clear active in this svg
+          svg.querySelectorAll('.region').forEach(r=>r.classList.remove('active'))
+          node.classList.add('active')
+          const name = node.getAttribute('data-name') || 'Region'
+          const list = data[name] || ['No data available']
+          renderInfo(info, name, list)
+        })
+      })
+    }
+
+    // Map league names to page files
+    const leaguePages = {
+      'Premier League': 'premierleague.html',
+      'English Championship': 'championship.html',
+      'La Liga (Spain)': 'laliga.html',
+      'Primeira Liga (Portugal)': 'primeiraliga.html',
+      'Ligue 1': 'ligue1.html',
+      'Bundesliga': 'bundesliga.html',
+      'Serie A': 'seriea.html',
+      'Allsvenskan (Sweden)': 'allsvenskan.html',
+      'Eliteserien (Norway)': 'eliteserien.html',
+      'Botola (Morocco)': 'botola.html',
+      'Egyptian Premier League': 'egyptian-premier.html',
+      'Tunisian Ligue 1': 'tunisian-ligue1.html',
+      'Ghana Premier League': 'ghana-premier.html',
+      'Nigerian Premier League': 'nigerian-premier.html',
+      'Kenyan Premier League': 'kenyan-premier.html',
+      'Tanzanian Premier League': 'tanzanian-premier.html',
+      'South African Premier Division': 'sa-premier.html',
+      'Zimbabwe Premier Soccer League': 'zimbabwe-premier.html',
+      'Cameroon Elite One': 'cameroon-elite.html'
+    }
+
+    function renderInfo(container, regionName, items){
+      container.innerHTML = `<h3>${regionName}</h3>` + items.map(i=>{
+        const pageFile = leaguePages[i] || '#';
+        return `<a href="${pageFile}" class="league">${i}</a>`
+      }).join('')
+    }
+
+    // initialize
+    attach('europe-panel', europeLeagues, 'europe-list')
+    attach('africa-panel', africaLeagues, 'africa-list')
+
+    // pre-select one region to show content
+    document.querySelectorAll('#europe-panel .region')[0].click()
+    document.querySelectorAll('#africa-panel .region')[0].click()
+  </script>
+
+
+</body></html>

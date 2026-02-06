@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Championship 2025-2026 | daily sport+</title>
+  <style>
+    :root{--bg1:#061430;--bg2:#07294a;--accent:#ffd400;--card:#0d2a3f;--glass:rgba(255,255,255,0.04);--success:#4ade80;--danger:#f87171}
+    html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:#eaf6ff}
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;border-bottom:1px solid rgba(255,255,255,0.08)}
+    .header-left{display:flex;align-items:center;gap:16px}
+    .back-btn{background:rgba(255,255,255,0.08);border:none;color:#ffd400;padding:10px 16px;border-radius:6px;cursor:pointer;font-weight:600;transition:all .2s}
+    .back-btn:hover{background:rgba(255,255,255,0.12);transform:translateX(-2px)}
+    h1{margin:0;font-size:28px}
+    .season{color:#9fc7ff;font-size:14px;opacity:.85}
+    main{padding:24px 32px}
+    .section{margin-bottom:28px}
+    .section-title{font-size:20px;font-weight:600;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid var(--accent)}
+    .matches-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin-bottom:20px}
+    .match-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),var(--glass));border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.08);transition:all .2s}
+    .match-card:hover{border-color:var(--accent);box-shadow:0 4px 12px rgba(255,212,0,0.1)}
+    .match-date{font-size:12px;color:#9fc7ff;margin-bottom:8px;text-transform:uppercase}
+    .match-status{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin-bottom:10px}
+    .status-live{background:rgba(244,63,94,0.2);color:#f87171}
+    .status-finished{background:rgba(74,222,128,0.2);color:#4ade80}
+    .status-upcoming{background:rgba(96,165,250,0.2);color:#60a5fa}
+    .teamrow{display:flex;justify-content:space-between;align-items:center;margin:8px 0}
+    .team{display:flex;items-align:center;gap:8px;font-weight:500}
+    .score{font-size:18px;font-weight:700;color:var(--accent)}
+    .standings-table{width:100%;border-collapse:collapse;background:linear-gradient(180deg,rgba(255,255,255,0.02),var(--glass));border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.08)}
+    .standings-table th{background:rgba(255,255,255,0.08);padding:12px;text-align:left;font-weight:600;font-size:13px;text-transform:uppercase;color:#9fc7ff}
+    .standings-table td{padding:12px;border-top:1px solid rgba(255,255,255,0.04)}
+    .standings-table tr:hover{background:rgba(255,212,0,0.05)}
+    .position{font-weight:700;color:var(--accent);min-width:25px}
+    .team-name{font-weight:500}
+    .stats-cell{text-align:center;color:#b4d1ff}
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+    .stat-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),var(--glass));padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);text-align:center}
+    .stat-value{font-size:28px;font-weight:700;color:var(--accent)}
+    .stat-label{font-size:12px;color:#9fc7ff;margin-top:6px;text-transform:uppercase}
+    .news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+    .news-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),var(--glass));border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);transition:all .2s;cursor:pointer}
+    .news-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .news-image{width:100%;height:160px;background:linear-gradient(135deg,#1a4d7a,#0d2a3f);display:flex;align-items:center;justify-content:center;font-size:40px}
+    .news-content{padding:14px}
+    .news-date{font-size:11px;color:#9fc7ff;margin-bottom:6px;text-transform:uppercase}
+    .news-title{font-weight:600;font-size:14px;margin-bottom:8px;line-height:1.4}
+    .news-excerpt{font-size:13px;color:#b4d1ff;line-height:1.5}
+    .modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:1000;align-items:center;justify-content:center}
+    .modal.active{display:flex}
+    .modal-content{background:linear-gradient(135deg,var(--bg1),var(--bg2));border-radius:12px;width:90%;max-width:800px;max-height:85vh;overflow-y:auto;padding:24px;border:1px solid rgba(255,212,0,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.8)}
+    .modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+    .modal-title{font-size:24px;font-weight:700}
+    .modal-close{background:rgba(255,255,255,0.1);border:none;color:#fff;width:36px;height:36px;border-radius:6px;cursor:pointer;font-size:20px;transition:all .2s}
+    .modal-close:hover{background:rgba(255,255,255,0.2)}
+    .team-info{display:flex;gap:16px;margin-bottom:24px;align-items:center;padding:16px;background:rgba(255,255,255,0.02);border-radius:10px}
+    .team-info-text h3{margin:0;font-size:24px;font-weight:700}
+    .team-info-text p{margin:4px 0 0;color:#9fc7ff;font-size:13px}
+    .formation-field{width:100%;background:linear-gradient(180deg,#1b5a2e 0%,#0f3620 50%,#1b5a2e 100%);border-radius:10px;padding:20px;min-height:600px;border:2px solid rgba(255,255,255,0.1);position:relative;box-shadow:inset 0 0 40px rgba(0,0,0,0.5)}
+    .field-markings{width:100%;height:100%;position:relative}
+    .field-center-line{position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,0.3)}
+    .field-center-circle{position:absolute;left:50%;top:50%;width:120px;height:120px;border:2px solid rgba(255,255,255,0.3);border-radius:50%;transform:translate(-50%,-50%);box-shadow:inset 0 0 20px rgba(0,0,0,0.3)}
+    .formation-row{display:flex;justify-content:space-around;align-items:center;margin:30px 0}
+    .player-position-card{display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;transition:all .2s}
+    .player-position-card:hover{transform:scale(1.1)}
+    .player-shirt{width:60px;height:75px;position:relative;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.4);transition:all .2s}
+    .player-shirt:hover{transform:scale(1.15);box-shadow:0 6px 16px rgba(255,212,0,0.3)}
+    .shirt-number{font-size:24px;font-weight:700}
+    .player-info-field{text-align:center;font-size:11px}
+    .player-info-field .player-name{font-weight:600;color:#fff;margin-bottom:2px;font-size:12px}
+    .player-info-field .player-pos{color:#b4d1ff;font-size:10px;text-transform:uppercase}
+    .player-stats-header{display:flex;gap:16px;margin-bottom:20px}
+    .player-stats-info h3{margin:0 0 4px;font-size:22px}
+    .player-stats-info p{margin:2px 0;font-size:13px;color:#9fc7ff}
+    .stat-item{background:rgba(255,255,255,0.03);padding:12px;border-radius:8px;border-left:3px solid var(--accent)}
+    .stat-item-label{font-size:11px;color:#9fc7ff;text-transform:uppercase;margin-bottom:4px}
+    .stat-item-value{font-size:24px;font-weight:700;color:var(--accent)}
+    .career-section{margin-top:20px}
+    .career-section h4{margin:12px 0 8px;font-size:14px;color:var(--accent)}
+    .career-item{background:rgba(255,255,255,0.02);padding:10px;border-radius:6px;margin-bottom:6px;border-left:2px solid #9fc7ff}
+    .career-team{font-weight:600;font-size:13px}
+    .career-years{font-size:11px;color:#9fc7ff}
+    footer{padding:18px 32px;border-top:1px solid rgba(255,255,255,0.08);color:#9fc7ff;font-size:13px;text-align:center}
+    @media (max-width:768px){main{padding:16px}.matches-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.news-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <button class="back-btn" onclick="history.back()">← Back</button>
+      <div>
+        <h1>EFL Championship</h1>
+        <p class="season">2025-2026 Season</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2 class="section-title">⚽ Latest Matches</h2>
+      <div class="matches-grid">
+        <div class="match-card">
+          <div class="match-date">Gameweek 31 · Feb 6, 2026</div>
+          <span class="match-status status-finished">Finished</span>
+          <div class="teamrow"><span class="team">🎪 Sunderland AFC</span><span class="score">2</span></div>
+          <div class="teamrow"><span class="team">Middlesbrough</span><span class="score">1</span></div>
+        </div>
+        <div class="match-card">
+          <div class="match-date">Gameweek 31 · Feb 5, 2026</div>
+          <span class="match-status status-finished">Finished</span>
+          <div class="teamrow"><span class="team">🔴 Leicester City</span><span class="score">3</span></div>
+          <div class="teamrow"><span class="team">Coventry City</span><span class="score">1</span></div>
+        </div>
+        <div class="match-card">
+          <div class="match-date">Gameweek 31 · Feb 8, 2026</div>
+          <span class="match-status status-upcoming">Upcoming</span>
+          <div class="teamrow"><span class="team">Leeds United</span><span class="score">–</span></div>
+          <div class="teamrow"><span class="team">Bristol City</span><span class="score">–</span></div>
+        </div>
+        <div class="match-card">
+          <div class="match-date">Gameweek 31 · Feb 9, 2026</div>
+          <span class="match-status status-upcoming">Upcoming</span>
+          <div class="teamrow"><span class="team">West Bromwich Albion</span><span class="score">–</span></div>
+          <div class="teamrow"><span class="team">Plymouth Argyle</span><span class="score">–</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">🏆 League Standings</h2>
+      <table class="standings-table">
+        <thead>
+          <tr>
+            <th style="width:50px">Pos</th>
+            <th>Team</th>
+            <th style="width:50px">P</th>
+            <th style="width:50px">W</th>
+            <th style="width:50px">D</th>
+            <th style="width:50px">L</th>
+            <th style="width:60px">GF</th>
+            <th style="width:60px">GA</th>
+            <th style="width:60px">GD</th>
+            <th style="width:60px">Pts</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="position">1</span></td><td class="team-name">Leicester City</td><td class="stats-cell">31</td><td class="stats-cell">20</td><td class="stats-cell">4</td><td class="stats-cell">7</td><td class="stats-cell">62</td><td class="stats-cell">32</td><td class="stats-cell">+30</td><td class="stats-cell">64</td></tr>
+          <tr><td><span class="position">2</span></td><td class="team-name">Sunderland AFC</td><td class="stats-cell">31</td><td class="stats-cell">19</td><td class="stats-cell">5</td><td class="stats-cell">7</td><td class="stats-cell">58</td><td class="stats-cell">36</td><td class="stats-cell">+22</td><td class="stats-cell">62</td></tr>
+          <tr><td><span class="position">3</span></td><td class="team-name">Leeds United</td><td class="stats-cell">30</td><td class="stats-cell">18</td><td class="stats-cell">3</td><td class="stats-cell">9</td><td class="stats-cell">54</td><td class="stats-cell">38</td><td class="stats-cell">+16</td><td class="stats-cell">57</td></tr>
+          <tr><td><span class="position">4</span></td><td class="team-name">Middlesbrough</td><td class="stats-cell">31</td><td class="stats-cell">16</td><td class="stats-cell">7</td><td class="stats-cell">8</td><td class="stats-cell">48</td><td class="stats-cell">36</td><td class="stats-cell">+12</td><td class="stats-cell">55</td></tr>
+          <tr><td><span class="position">5</span></td><td class="team-name">West Bromwich Albion</td><td class="stats-cell">31</td><td class="stats-cell">15</td><td class="stats-cell">6</td><td class="stats-cell">10</td><td class="stats-cell">46</td><td class="stats-cell">42</td><td class="stats-cell">+4</td><td class="stats-cell">51</td></tr>
+          <tr><td><span class="position">6</span></td><td class="team-name">Bristol City</td><td class="stats-cell">31</td><td class="stats-cell">14</td><td class="stats-cell">5</td><td class="stats-cell">12</td><td class="stats-cell">44</td><td class="stats-cell">44</td><td class="stats-cell">0</td><td class="stats-cell">47</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">📊 Season Statistics</h2>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-value">952</div><div class="stat-label">Total Goals</div></div>
+        <div class="stat-card"><div class="stat-value">30.7</div><div class="stat-label">Avg Goals/Match</div></div>
+        <div class="stat-card"><div class="stat-value">46</div><div class="stat-label">Total Matches</div></div>
+        <div class="stat-card"><div class="stat-value">47.8</div><div class="stat-label">Avg Possession %</div></div>
+        <div class="stat-card"><div class="stat-value">721</div><div class="stat-label">Total Yellow Cards</div></div>
+        <div class="stat-card"><div class="stat-value">24</div><div class="stat-label">Total Red Cards</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">📰 Latest News & Features</h2>
+      <div class="news-grid">
+        <div class="news-card">
+          <div class="news-image">🏆</div>
+          <div class="news-content">
+            <div class="news-date">Feb 6, 2026</div>
+            <div class="news-title">Leicester Maintains Top Spot After Victory</div>
+            <div class="news-excerpt">The Foxes extend their lead at the summit with a convincing win, cementing their promotion push with 15 matches remaining.</div>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="news-image">📈</div>
+          <div class="news-content">
+            <div class="news-date">Feb 5, 2026</div>
+            <div class="news-title">Promotion Race Intensifies</div>
+            <div class="news-excerpt">With just four points separating first and fifth place, the Championship remains wide open entering the final stretch.</div>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="news-image">⭐</div>
+          <div class="news-content">
+            <div class="news-date">Feb 4, 2026</div>
+            <div class="news-title">Young Talents Emerging in Second Tier</div>
+            <div class="news-excerpt">Several academy graduates are making their mark with impressive performances in the Championship this season.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Daily Sport+ | EFL Championship 2025-2026 Season | Data as of February 6, 2026</footer>
+
+  <div class="modal" id="teamModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="modalTeamName">Team Lineup</div>
+        <button class="modal-close" onclick="closeTeamModal()">✕</button>
+      </div>
+      <div class="team-info" id="teamInfoDiv"></div>
+      <div class="formation-field" id="playersGrid"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="playerModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div style="flex:1"></div>
+        <button class="modal-close" onclick="closePlayerModal()">✕</button>
+      </div>
+      <div class="player-stats-header" id="playerHeader"></div>
+      <div class="stats-row" id="playerSeasonStats"></div>
+      <div class="career-section" id="careerHistory"></div>
+    </div>
+  </div>
+
+  <script>
+    const teamColors = {
+      'Leicester City': {primary: '#0053A0', secondary: '#FFFFFF', border: '#003D7A'},
+      'Sunderland AFC': {primary: '#EB3223', secondary: '#FFFFFF', border: '#A01A1A'},
+      'Leeds United': {primary: '#FFCD00', secondary: '#FFFFFF', border: '#003366'},
+      'Middlesbrough': {primary: '#E41E20', secondary: '#FFFFFF', border: '#8B0F0F'},
+      'West Bromwich Albion': {primary: '#122F67', secondary: '#FFFFFF', border: '#0D1F47'},
+      'Bristol City': {primary: '#C41E3A', secondary: '#FFFFFF', border: '#7A0F23'}
+    };
+
+    const teamSquads = {
+      'Leicester City': {
+        colors: teamColors['Leicester City'],
+        formation: '4-2-3-1',
+        players: [
+          {name: 'Schmeichel', pos: 'GK', number: 1, formation: {row: 0, position: 0}, seasonGoals: 0, seasonApps: 28, seasonAssists: 0, career: [{team: 'Manchester City', years: '2018-2021'}, {team: 'Leicester City', years: '2021-2026'}]},
+          {name: 'Pereira', pos: 'RB', number: 2, formation: {row: 1, position: 0}, seasonGoals: 1, seasonApps: 26, seasonAssists: 4, career: [{team: 'Porto', years: '2017-2018'}, {team: 'Leicester City', years: '2018-2026'}]},
+          {name: 'Evans', pos: 'CB', number: 6, formation: {row: 1, position: 1}, seasonGoals: 2, seasonApps: 27, seasonAssists: 1, career: [{team: 'Manchester United', years: '2006-2015'}, {team: 'Leicester City', years: '2017-2026'}]},
+          {name: 'Souttar', pos: 'CB', number: 4, formation: {row: 1, position: 2}, seasonGoals: 1, seasonApps: 25, seasonAssists: 0, career: [{team: 'Dundee United', years: '2015-2019'}, {team: 'Leicester City', years: '2021-2026'}]},
+          {name: 'Castagne', pos: 'LB', number: 3, formation: {row: 1, position: 3}, seasonGoals: 0, seasonApps: 24, seasonAssists: 3, career: [{team: 'Atalanta', years: '2017-2020'}, {team: 'Leicester City', years: '2020-2026'}]},
+          {name: 'Ndidi', pos: 'CM', number: 25, formation: {row: 2, position: 0}, seasonGoals: 0, seasonApps: 29, seasonAssists: 0, career: [{team: 'Genk', years: '2015-2017'}, {team: 'Leicester City', years: '2017-2026'}]},
+          {name: 'Dewsbury-Hall', pos: 'CM', number: 14, formation: {row: 2, position: 1}, seasonGoals: 2, seasonApps: 26, seasonAssists: 2, career: [{team: 'Leicester City Academy', years: '2010-2019'}, {team: 'Leicester City', years: '2021-2026'}]},
+          {name: 'Maddison', pos: 'AM', number: 10, formation: {row: 3, position: 0}, seasonGoals: 8, seasonApps: 28, seasonAssists: 7, career: [{team: 'Norwich City', years: '2017-2018'}, {team: 'Leicester City', years: '2018-2026'}]},
+          {name: 'Buonanotte', pos: 'LM', number: 19, formation: {row: 3, position: 1}, seasonGoals: 6, seasonApps: 25, seasonAssists: 5, career: [{team: 'Brighton', years: '2022-2024'}, {team: 'Leicester City', years: '2024-2026'}]},
+          {name: 'Iheanacho', pos: 'ST', number: 9, formation: {row: 3, position: 2}, seasonGoals: 14, seasonApps: 29, seasonAssists: 3, career: [{team: 'Manchester City', years: '2014-2017'}, {team: 'Leicester City', years: '2017-2026'}]},
+          {name: 'Mavididi', pos: 'RM', number: 11, formation: {row: 3, position: 3}, seasonGoals: 9, seasonApps: 27, seasonAssists: 4, career: [{team: 'Arsenal Academy', years: '2010-2015'}, {team: 'Leicester City', years: '2020-2026'}]}
+        ]
+      },
+      'Sunderland AFC': {
+        colors: teamColors['Sunderland AFC'],
+        formation: '4-3-3',
+        players: [
+          {name: 'Myhre', pos: 'GK', number: 1, formation: {row: 0, position: 0}, seasonGoals: 0, seasonApps: 27, seasonAssists: 0, career: [{team: 'Molde', years: '2021-2023'}, {team: 'Sunderland AFC', years: '2023-2026'}]},
+          {name: "O'Nien", pos: 'RB', number: 2, formation: {row: 1, position: 0}, seasonGoals: 0, seasonApps: 25, seasonAssists: 2, career: [{team: 'Sunderland Academy', years: '2013-2018'}, {team: 'Sunderland AFC', years: '2018-2026'}]},
+          {name: 'Cirkin', pos: 'LB', number: 3, formation: {row: 1, position: 1}, seasonGoals: 0, seasonApps: 22, seasonAssists: 1, career: [{team: 'Tottenham', years: '2020-2021'}, {team: 'Sunderland AFC', years: '2021-2026'}]},
+          {name: 'Ballard', pos: 'CB', number: 5, formation: {row: 1, position: 2}, seasonGoals: 3, seasonApps: 28, seasonAssists: 0, career: [{team: 'Walsall', years: '2016-2019'}, {team: 'Sunderland AFC', years: '2019-2026'}]},
+          {name: 'Alese', pos: 'CB', number: 6, formation: {row: 1, position: 3}, seasonGoals: 1, seasonApps: 26, seasonAssists: 0, career: [{team: 'Sunderland Academy', years: '2010-2017'}, {team: 'Sunderland AFC', years: '2017-2026'}]},
+          {name: 'Gooch', pos: 'CM', number: 4, formation: {row: 2, position: 0}, seasonGoals: 1, seasonApps: 24, seasonAssists: 1, career: [{team: 'Sunderland Academy', years: '2015-2021'}, {team: 'Sunderland AFC', years: '2021-2026'}]},
+          {name: 'Neil', pos: 'CM', number: 25, formation: {row: 2, position: 1}, seasonGoals: 2, seasonApps: 25, seasonAssists: 2, career: [{team: 'Norwich City', years: '2020-2022'}, {team: 'Sunderland AFC', years: '2022-2026'}]},
+          {name: 'Rigg', pos: 'AM', number: 12, formation: {row: 2, position: 2}, seasonGoals: 6, seasonApps: 26, seasonAssists: 4, career: [{team: 'Sunderland Academy', years: '2015-2021'}, {team: 'Sunderland AFC', years: '2021-2026'}]},
+          {name: 'Ekwah', pos: 'LM', number: 8, formation: {row: 3, position: 0}, seasonGoals: 4, seasonApps: 23, seasonAssists: 3, career: [{team: 'St Etienne', years: '2020-2022'}, {team: 'Sunderland AFC', years: '2022-2026'}]},
+          {name: 'Clarke', pos: 'ST', number: 9, formation: {row: 3, position: 1}, seasonGoals: 12, seasonApps: 27, seasonAssists: 2, career: [{team: 'Coventry City', years: '2019-2020'}, {team: 'Sunderland AFC', years: '2020-2026'}]},
+          {name: 'Ismaila', pos: 'RM', number: 11, formation: {row: 3, position: 2}, seasonGoals: 7, seasonApps: 25, seasonAssists: 4, career: [{team: 'Benfica', years: '2021-2023'}, {team: 'Sunderland AFC', years: '2023-2026'}]}
+        ]
+      },
+      'Leeds United': {
+        colors: teamColors['Leeds United'],
+        formation: '4-3-3',
+        players: [
+          {name: 'Meslier', pos: 'GK', number: 1, formation: {row: 0, position: 0}, seasonGoals: 0, seasonApps: 28, seasonAssists: 0, career: [{team: 'Paris Saint-Germain', years: '2017-2018'}, {team: 'Leeds United', years: '2019-2026'}]},
+          {name: 'Ayling', pos: 'RB', number: 2, formation: {row: 1, position: 0}, seasonGoals: 1, seasonApps: 26, seasonAssists: 2, career: [{team: 'Arsenal', years: '2010-2012'}, {team: 'Leeds United', years: '2017-2026'}]},
+          {name: 'Struijk', pos: 'CB', number: 21, formation: {row: 1, position: 1}, seasonGoals: 2, seasonApps: 27, seasonAssists: 0, career: [{team: 'Ajax', years: '2016-2018'}, {team: 'Leeds United', years: '2018-2026'}]},
+          {name: 'Rodon', pos: 'CB', number: 6, formation: {row: 1, position: 2}, seasonGoals: 1, seasonApps: 24, seasonAssists: 0, career: [{team: 'Swansea City', years: '2015-2020'}, {team: 'Leeds United', years: '2020-2026'}]},
+          {name: 'Firpo', pos: 'LB', number: 3, formation: {row: 1, position: 3}, seasonGoals: 0, seasonApps: 22, seasonAssists: 3, career: [{team: 'Real Betis', years: '2017-2020'}, {team: 'Leeds United', years: '2021-2026'}]},
+          {name: 'Ampadu', pos: 'CM', number: 4, formation: {row: 2, position: 0}, seasonGoals: 1, seasonApps: 25, seasonAssists: 1, career: [{team: 'Chelsea', years: '2016-2017'}, {team: 'Leeds United', years: '2022-2026'}]},
+          {name: 'Phillips', pos: 'CM', number: 23, formation: {row: 2, position: 1}, seasonGoals: 3, seasonApps: 28, seasonAssists: 2, career: [{team: 'Leeds United Academy', years: '2012-2017'}, {team: 'Leeds United', years: '2017-2026'}]},
+          {name: 'Harrison', pos: 'LW', number: 11, formation: {row: 2, position: 2}, seasonGoals: 7, seasonApps: 26, seasonAssists: 4, career: [{team: 'Manchester City', years: '2014-2015'}, {team: 'Leeds United', years: '2018-2026'}]},
+          {name: 'Semenyo', pos: 'RM', number: 39, formation: {row: 3, position: 0}, seasonGoals: 5, seasonApps: 24, seasonAssists: 3, career: [{team: 'Bristol City', years: '2019-2021'}, {team: 'Leeds United', years: '2021-2026'}]},
+          {name: 'Piroe', pos: 'ST', number: 9, formation: {row: 3, position: 1}, seasonGoals: 13, seasonApps: 28, seasonAssists: 3, career: [{team: 'PSV Eindhoven', years: '2020-2021'}, {team: 'Leeds United', years: '2022-2026'}]},
+          {name: 'Wilfried', pos: 'LW', number: 19, formation: {row: 3, position: 2}, seasonGoals: 6, seasonApps: 23, seasonAssists: 4, career: [{team: 'Salford City', years: '2020-2021'}, {team: 'Leeds United', years: '2021-2026'}]}
+        ]
+      }
+    };
+
+    function showTeamLineup(teamName) {
+      const modal = document.getElementById('teamModal');
+      const teamData = teamSquads[teamName];
+      if (!teamData) return;
+      document.getElementById('modalTeamName').textContent = teamName + ' - ' + teamData.formation + ' Formation';
+      document.getElementById('teamInfoDiv').innerHTML = `<div class="team-info-text"><h3>${teamName}</h3><p>Formation: ${teamData.formation} • Squad Size: ${teamData.players.length}</p></div>`;
+      const rows = [[], [], [], [], []];
+      teamData.players.forEach(p => { rows[p.formation.row][p.formation.position] = p; });
+      let fieldHTML = '<div class="field-markings"><div class="field-center-line"></div><div class="field-center-circle"></div>';
+      rows.forEach(row => {
+        if (row.length === 0) return;
+        fieldHTML += '<div class="formation-row">';
+        row.forEach(player => {
+          if (!player) return;
+          fieldHTML += `<div class="player-position-card" onclick="showPlayerStats('${player.name}', '${teamName}')"><div class="player-shirt" style="background: linear-gradient(135deg, ${teamData.colors.primary} 0%, ${teamData.colors.primary} 70%, ${teamData.colors.secondary} 70%, ${teamData.colors.secondary} 100%); border: 2px solid ${teamData.colors.border};"><div class="shirt-number">${player.number}</div></div><div class="player-info-field"><div class="player-name">${player.name}</div><div class="player-pos">${player.pos}</div></div></div>`;
+        });
+        fieldHTML += '</div>';
+      });
+      fieldHTML += '</div>';
+      document.getElementById('playersGrid').innerHTML = fieldHTML;
+      modal.classList.add('active');
+    }
+
+    function showPlayerStats(playerName, teamName) {
+      const modal = document.getElementById('playerModal');
+      const player = teamSquads[teamName].players.find(p => p.name === playerName);
+      if (!player) return;
+      const colors = teamSquads[teamName].colors;
+      document.getElementById('playerHeader').innerHTML = `
+        <div class="player-shirt" style="width:100px;height:120px;border-radius:8px;background: linear-gradient(135deg, ${colors.primary} 0%, ${colors.primary} 70%, ${colors.secondary} 70%, ${colors.secondary} 100%); border: 2px solid ${colors.border}; display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:700;">${player.number}</div>
+        <div class="player-stats-info"><h3>${player.name}</h3><p><strong>${player.pos}</strong> • #${player.number}</p><p>${teamName} • 2025-2026 Season</p></div>
+      `;
+      document.getElementById('playerSeasonStats').innerHTML = `
+        <div class="stat-item"><div class="stat-item-label">Appearances</div><div class="stat-item-value">${player.seasonApps}</div></div>
+        <div class="stat-item"><div class="stat-item-label">Goals</div><div class="stat-item-value">${player.seasonGoals}</div></div>
+        <div class="stat-item"><div class="stat-item-label">Assists</div><div class="stat-item-value">${player.seasonAssists}</div></div>
+        <div class="stat-item"><div class="stat-item-label">Goals per Match</div><div class="stat-item-value">${(player.seasonGoals/player.seasonApps).toFixed(2)}</div></div>
+      `;
+      document.getElementById('careerHistory').innerHTML = `<h4>Career History</h4>${player.career.map(c => `<div class="career-item"><div class="career-team">${c.team}</div><div class="career-years">${c.years}</div></div>`).join('')}`;
+      modal.classList.add('active');
+    }
+
+    function closeTeamModal() { document.getElementById('teamModal').classList.remove('active'); }
+    function closePlayerModal() { document.getElementById('playerModal').classList.remove('active'); }
+
+    document.querySelectorAll('.standings-table tbody tr').forEach(row => {
+      row.addEventListener('click', function() { showTeamLineup(this.querySelector('.team-name').textContent); });
+    });
+
+    document.getElementById('teamModal').addEventListener('click', function(e) { if (e.target === this) closeTeamModal(); });
+    document.getElementById('playerModal').addEventListener('click', function(e) { if (e.target === this) closePlayerModal(); });
+  </script>
+</body>
+</html>

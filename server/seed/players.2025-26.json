@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Lionel Messi",
+        "team": "Paris Saint-Germain",
+        "position": "Forward",
+        "age": 38,
+        "nationality": "Argentina",
+        "goals": 25,
+        "assists": 10,
+        "matches": 30,
+        "image": "https://example.com/images/messi.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Cristiano Ronaldo",
+        "team": "Al Nassr",
+        "position": "Forward",
+        "age": 40,
+        "nationality": "Portugal",
+        "goals": 22,
+        "assists": 5,
+        "matches": 28,
+        "image": "https://example.com/images/ronaldo.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Kylian Mbappé",
+        "team": "Paris Saint-Germain",
+        "position": "Forward",
+        "age": 26,
+        "nationality": "France",
+        "goals": 20,
+        "assists": 8,
+        "matches": 30,
+        "image": "https://example.com/images/mbappe.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Mohamed Salah",
+        "team": "Liverpool",
+        "position": "Forward",
+        "age": 31,
+        "nationality": "Egypt",
+        "goals": 18,
+        "assists": 7,
+        "matches": 29,
+        "image": "https://example.com/images/salah.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Sadio Mané",
+        "team": "Al Nassr",
+        "position": "Forward",
+        "age": 31,
+        "nationality": "Senegal",
+        "goals": 15,
+        "assists": 6,
+        "matches": 28,
+        "image": "https://example.com/images/mane.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Kevin De Bruyne",
+        "team": "Manchester City",
+        "position": "Midfielder",
+        "age": 34,
+        "nationality": "Belgium",
+        "goals": 10,
+        "assists": 15,
+        "matches": 30,
+        "image": "https://example.com/images/debruyne.jpg"
+    },
+    {
+        "id": 7,
+        "name": "N'Golo Kanté",
+        "team": "Al Ahli",
+        "position": "Midfielder",
+        "age": 32,
+        "nationality": "France",
+        "goals": 5,
+        "assists": 10,
+        "matches": 25,
+        "image": "https://example.com/images/kante.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Virgil van Dijk",
+        "team": "Liverpool",
+        "position": "Defender",
+        "age": 32,
+        "nationality": "Netherlands",
+        "goals": 3,
+        "assists": 2,
+        "matches": 30,
+        "image": "https://example.com/images/vandijk.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Alisson Becker",
+        "team": "Liverpool",
+        "position": "Goalkeeper",
+        "age": 31,
+        "nationality": "Brazil",
+        "goals": 0,
+        "assists": 0,
+        "matches": 30,
+        "image": "https://example.com/images/alisson.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Edouard Mendy",
+        "team": "Al Ahli",
+        "position": "Goalkeeper",
+        "age": 31,
+        "nationality": "Senegal",
+        "goals": 0,
+        "assists": 0,
+        "matches": 28,
+        "image": "https://example.com/images/mendy.jpg"
+    }
+]

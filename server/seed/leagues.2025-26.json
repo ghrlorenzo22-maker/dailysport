@@ -1,0 +1,464 @@
+[
+  {
+    "league": "Premier League",
+    "season": "2025/2026",
+    "standings": [
+      {
+        "position": 1,
+        "team": "Manchester City",
+        "points": 85,
+        "played": 38,
+        "won": 27,
+        "drawn": 4,
+        "lost": 7,
+        "goalsFor": 89,
+        "goalsAgainst": 32,
+        "goalDifference": 57
+      },
+      {
+        "position": 2,
+        "team": "Liverpool",
+        "points": 80,
+        "played": 38,
+        "won": 24,
+        "drawn": 8,
+        "lost": 6,
+        "goalsFor": 78,
+        "goalsAgainst": 35,
+        "goalDifference": 43
+      },
+      {
+        "position": 3,
+        "team": "Chelsea",
+        "points": 75,
+        "played": 38,
+        "won": 23,
+        "drawn": 6,
+        "lost": 9,
+        "goalsFor": 70,
+        "goalsAgainst": 40,
+        "goalDifference": 30
+      },
+      {
+        "position": 4,
+        "team": "Arsenal",
+        "points": 72,
+        "played": 38,
+        "won": 21,
+        "drawn": 9,
+        "lost": 8,
+        "goalsFor": 65,
+        "goalsAgainst": 38,
+        "goalDifference": 27
+      },
+      {
+        "position": 5,
+        "team": "Manchester United",
+        "points": 68,
+        "played": 38,
+        "won": 20,
+        "drawn": 8,
+        "lost": 10,
+        "goalsFor": 66,
+        "goalsAgainst": 45,
+        "goalDifference": 21
+      }
+    ]
+  },
+  {
+    "league": "La Liga",
+    "season": "2025/2026",
+    "standings": [
+      {
+        "position": 1,
+        "team": "Real Madrid",
+        "points": 87,
+        "played": 38,
+        "won": 27,
+        "drawn": 6,
+        "lost": 5,
+        "goalsFor": 85,
+        "goalsAgainst": 30,
+        "goalDifference": 55
+      },
+      {
+        "position": 2,
+        "team": "Barcelona",
+        "points": 82,
+        "played": 38,
+        "won": 25,
+        "drawn": 7,
+        "lost": 6,
+        "goalsFor": 80,
+        "goalsAgainst": 35,
+        "goalDifference": 45
+      },
+      {
+        "position": 3,
+        "team": "Atletico Madrid",
+        "points": 75,
+        "played": 38,
+        "won": 22,
+        "drawn": 9,
+        "lost": 7,
+        "goalsFor": 70,
+        "goalsAgainst": 40,
+        "goalDifference": 30
+      },
+      {
+        "position": 4,
+        "team": "Sevilla",
+        "points": 70,
+        "played": 38,
+        "won": 20,
+        "drawn": 10,
+        "lost": 8,
+        "goalsFor": 65,
+        "goalsAgainst": 38,
+        "goalDifference": 27
+      },
+      {
+        "position": 5,
+        "team": "Real Sociedad",
+        "points": 68,
+        "played": 38,
+        "won": 19,
+        "drawn": 11,
+        "lost": 8,
+        "goalsFor": 60,
+        "goalsAgainst": 42,
+        "goalDifference": 18
+      }
+    ]
+  },
+  {
+    "league": "Bundesliga",
+    "season": "2025/2026",
+    "standings": [
+      {
+        "position": 1,
+        "team": "Bayern Munich",
+        "points": 86,
+        "played": 34,
+        "won": 27,
+        "drawn": 5,
+        "lost": 2,
+        "goalsFor": 90,
+        "goalsAgainst": 25,
+        "goalDifference": 65
+      },
+      {
+        "position": 2,
+        "team": "Borussia Dortmund",
+        "points": 75,
+        "played": 34,
+        "won": 23,
+        "drawn": 6,
+        "lost": 5,
+        "goalsFor": 80,
+        "goalsAgainst": 40,
+        "goalDifference": 40
+      },
+      {
+        "position": 3,
+        "team": "RB Leipzig",
+        "points": 70,
+        "played": 34,
+        "won": 21,
+        "drawn": 7,
+        "lost": 6,
+        "goalsFor": 75,
+        "goalsAgainst": 45,
+        "goalDifference": 30
+      },
+      {
+        "position": 4,
+        "team": "Bayer Leverkusen",
+        "points": 68,
+        "played": 34,
+        "won": 20,
+        "drawn": 8,
+        "lost": 6,
+        "goalsFor": 65,
+        "goalsAgainst": 42,
+        "goalDifference": 23
+      },
+      {
+        "position": 5,
+        "team": "VfL Wolfsburg",
+        "points": 65,
+        "played": 34,
+        "won": 19,
+        "drawn": 8,
+        "lost": 7,
+        "goalsFor": 60,
+        "goalsAgainst": 50,
+        "goalDifference": 10
+      }
+    ]
+  },
+  {
+    "league": "Serie A",
+    "season": "2025/2026",
+    "standings": [
+      {
+        "position": 1,
+        "team": "Inter Milan",
+        "points": 88,
+        "played": 38,
+        "won": 27,
+        "drawn": 7,
+        "lost": 4,
+        "goalsFor": 85,
+        "goalsAgainst": 30,
+        "goalDifference": 55
+      },
+      {
+        "position": 2,
+        "team": "AC Milan",
+        "points": 80,
+        "played": 38,
+        "won": 24,
+        "drawn": 8,
+        "lost": 6,
+        "goalsFor": 78,
+        "goalsAgainst": 35,
+        "goalDifference": 43
+      },
+      {
+        "position": 3,
+        "team": "Juventus",
+        "points": 75,
+        "played": 38,
+        "won": 22,
+        "drawn": 9,
+        "lost": 7,
+        "goalsFor": 70,
+        "goalsAgainst": 40,
+        "goalDifference": 30
+      },
+      {
+        "position": 4,
+        "team": "AS Roma",
+        "points": 72,
+        "played": 38,
+        "won": 21,
+        "drawn": 9,
+        "lost": 8,
+        "goalsFor": 65,
+        "goalsAgainst": 38,
+        "goalDifference": 27
+      },
+      {
+        "position": 5,
+        "team": "Napoli",
+        "points": 68,
+        "played": 38,
+        "won": 20,
+        "drawn": 8,
+        "lost": 10,
+        "goalsFor": 66,
+        "goalsAgainst": 45,
+        "goalDifference": 21
+      }
+    ]
+  },
+  {
+    "league": "Ligue 1",
+    "season": "2025/2026",
+    "standings": [
+      {
+        "position": 1,
+        "team": "Paris Saint-Germain",
+        "points": 86,
+        "played": 38,
+        "won": 27,
+        "drawn": 5,
+        "lost": 6,
+        "goalsFor": 90,
+        "goalsAgainst": 40,
+        "goalDifference": 50
+      },
+      {
+        "position": 2,
+        "team": "Lille",
+        "points": 75,
+        "played": 38,
+        "won": 23,
+        "drawn": 6,
+        "lost": 9,
+        "goalsFor": 70,
+        "goalsAgainst": 45,
+        "goalDifference": 25
+      },
+      {
+        "position": 3,
+        "team": "Monaco",
+        "points": 72,
+        "played": 38,
+        "won": 21,
+        "drawn": 9,
+        "lost": 8,
+        "goalsFor": 68,
+        "goalsAgainst": 42,
+        "goalDifference": 26
+      },
+      {
+        "position": 4,
+        "team": "Olympique Lyonnais",
+        "points": 70,
+        "played": 38,
+        "won": 20,
+        "drawn": 10,
+        "lost": 8,
+        "goalsFor": 65,
+        "goalsAgainst": 38,
+        "goalDifference": 27
+      },
+      {
+        "position": 5,
+        "team": "Olympique de Marseille",
+        "points": 68,
+        "played": 38,
+        "won": 20,
+        "drawn": 8,
+        "lost": 10,
+        "goalsFor": 66,
+        "goalsAgainst": 45,
+        "goalDifference": 21
+      }
+    ]
+  },
+  {
+    "league": "Egyptian Premier League",
+    "season": "2025/2026",
+    "standings": [
+      {
+        "position": 1,
+        "team": "Al Ahly",
+        "points": 80,
+        "played": 34,
+        "won": 25,
+        "drawn": 5,
+        "lost": 4,
+        "goalsFor": 70,
+        "goalsAgainst": 20,
+        "goalDifference": 50
+      },
+      {
+        "position": 2,
+        "team": "Zamalek",
+        "points": 76,
+        "played": 34,
+        "won": 23,
+        "drawn": 7,
+        "lost": 4,
+        "goalsFor": 68,
+        "goalsAgainst": 22,
+        "goalDifference": 46
+      },
+      {
+        "position": 3,
+        "team": "Pyramids FC",
+        "points": 70,
+        "played": 34,
+        "won": 21,
+        "drawn": 7,
+        "lost": 6,
+        "goalsFor": 65,
+        "goalsAgainst": 30,
+        "goalDifference": 35
+      },
+      {
+        "position": 4,
+        "team": "Al Ittihad",
+        "points": 65,
+        "played": 34,
+        "won": 19,
+        "drawn": 8,
+        "lost": 7,
+        "goalsFor": 60,
+        "goalsAgainst": 35,
+        "goalDifference": 25
+      },
+      {
+        "position": 5,
+        "team": "Al Masry",
+        "points": 62,
+        "played": 34,
+        "won": 18,
+        "drawn": 8,
+        "lost": 8,
+        "goalsFor": 55,
+        "goalsAgainst": 40,
+        "goalDifference": 15
+      }
+    ]
+  },
+  {
+    "league": "Tunisian Ligue Professionnelle 1",
+    "season": "2025/2026",
+    "standings": [
+      {
+        "position": 1,
+        "team": "Espérance de Tunis",
+        "points": 78,
+        "played": 30,
+        "won": 24,
+        "drawn": 6,
+        "lost": 0,
+        "goalsFor": 70,
+        "goalsAgainst": 15,
+        "goalDifference": 55
+      },
+      {
+        "position": 2,
+        "team": "Club Africain",
+        "points": 70,
+        "played": 30,
+        "won": 21,
+        "drawn": 7,
+        "lost": 2,
+        "goalsFor": 65,
+        "goalsAgainst": 20,
+        "goalDifference": 45
+      },
+      {
+        "position": 3,
+        "team": "CS Sfaxien",
+        "points": 65,
+        "played": 30,
+        "won": 19,
+        "drawn": 8,
+        "lost": 3,
+        "goalsFor": 60,
+        "goalsAgainst": 25,
+        "goalDifference": 35
+      },
+      {
+        "position": 4,
+        "team": "Club Sportif Sfaxien",
+        "points": 60,
+        "played": 30,
+        "won": 18,
+        "drawn": 6,
+        "lost": 6,
+        "goalsFor": 55,
+        "goalsAgainst": 30,
+        "goalDifference": 25
+      },
+      {
+        "position": 5,
+        "team": "US Monastir",
+        "points": 58,
+        "played": 30,
+        "won": 17,
+        "drawn": 7,
+        "lost": 6,
+        "goalsFor": 50,
+        "goalsAgainst": 28,
+        "goalDifference": 22
+      }
+    ]
+  }
+]

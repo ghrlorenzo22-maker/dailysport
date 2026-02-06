@@ -1,0 +1,76 @@
+{
+  "matches": [
+    {
+      "matchId": "1",
+      "date": "2025-08-15",
+      "homeTeam": "Manchester City",
+      "awayTeam": "Liverpool",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "league": "Premier League"
+    },
+    {
+      "matchId": "2",
+      "date": "2025-08-16",
+      "homeTeam": "Barcelona",
+      "awayTeam": "Real Madrid",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "league": "La Liga"
+    },
+    {
+      "matchId": "3",
+      "date": "2025-08-17",
+      "homeTeam": "Bayern Munich",
+      "awayTeam": "Borussia Dortmund",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "league": "Bundesliga"
+    },
+    {
+      "matchId": "4",
+      "date": "2025-08-18",
+      "homeTeam": "Paris Saint-Germain",
+      "awayTeam": "Marseille",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "league": "Ligue 1"
+    },
+    {
+      "matchId": "5",
+      "date": "2025-08-19",
+      "homeTeam": "Juventus",
+      "awayTeam": "AC Milan",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "league": "Serie A"
+    },
+    {
+      "matchId": "6",
+      "date": "2025-08-20",
+      "homeTeam": "Al Ahly",
+      "awayTeam": "Zamalek",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "league": "Egyptian Premier League"
+    },
+    {
+      "matchId": "7",
+      "date": "2025-08-21",
+      "homeTeam": "Kaizer Chiefs",
+      "awayTeam": "Orlando Pirates",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "league": "PSL"
+    },
+    {
+      "matchId": "8",
+      "date": "2025-08-22",
+      "homeTeam": "Raja Casablanca",
+      "awayTeam": "Wydad Casablanca",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "league": "Botola Pro"
+    }
+  ]
+}

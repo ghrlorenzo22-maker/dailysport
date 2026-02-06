@@ -1,0 +1,202 @@
+[
+    {
+        "name": "Manchester City",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/a/ab/Manchester_City_crest.svg",
+        "stadium": "Etihad Stadium",
+        "coach": "Pep Guardiola",
+        "players": [
+            {
+                "name": "Erling Haaland",
+                "position": "Forward",
+                "goals": 25,
+                "assists": 5
+            },
+            {
+                "name": "Kevin De Bruyne",
+                "position": "Midfielder",
+                "goals": 10,
+                "assists": 15
+            }
+        ]
+    },
+    {
+        "name": "Liverpool",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg",
+        "stadium": "Anfield",
+        "coach": "Jürgen Klopp",
+        "players": [
+            {
+                "name": "Mohamed Salah",
+                "position": "Forward",
+                "goals": 20,
+                "assists": 8
+            },
+            {
+                "name": "Sadio Mané",
+                "position": "Forward",
+                "goals": 15,
+                "assists": 5
+            }
+        ]
+    },
+    {
+        "name": "Chelsea",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/4/43/Chelsea_FC.svg",
+        "stadium": "Stamford Bridge",
+        "coach": "Graham Potter",
+        "players": [
+            {
+                "name": "Raheem Sterling",
+                "position": "Forward",
+                "goals": 12,
+                "assists": 6
+            },
+            {
+                "name": "Mason Mount",
+                "position": "Midfielder",
+                "goals": 8,
+                "assists": 10
+            }
+        ]
+    },
+    {
+        "name": "Barcelona",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona.svg",
+        "stadium": "Camp Nou",
+        "coach": "Xavi Hernández",
+        "players": [
+            {
+                "name": "Robert Lewandowski",
+                "position": "Forward",
+                "goals": 30,
+                "assists": 5
+            },
+            {
+                "name": "Frenkie de Jong",
+                "position": "Midfielder",
+                "goals": 5,
+                "assists": 12
+            }
+        ]
+    },
+    {
+        "name": "Real Madrid",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
+        "stadium": "Santiago Bernabéu Stadium",
+        "coach": "Carlo Ancelotti",
+        "players": [
+            {
+                "name": "Karim Benzema",
+                "position": "Forward",
+                "goals": 28,
+                "assists": 7
+            },
+            {
+                "name": "Luka Modrić",
+                "position": "Midfielder",
+                "goals": 6,
+                "assists": 10
+            }
+        ]
+    },
+    {
+        "name": "Bayern Munich",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/1/1a/FC_Bayern_Munich_logo.svg",
+        "stadium": "Allianz Arena",
+        "coach": "Julian Nagelsmann",
+        "players": [
+            {
+                "name": "Thomas Müller",
+                "position": "Forward",
+                "goals": 18,
+                "assists": 9
+            },
+            {
+                "name": "Joshua Kimmich",
+                "position": "Midfielder",
+                "goals": 4,
+                "assists": 11
+            }
+        ]
+    },
+    {
+        "name": "Al Ahly",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/0/0f/Al_Ahly_SC_logo.svg",
+        "stadium": "Cairo International Stadium",
+        "coach": "Pitso Mosimane",
+        "players": [
+            {
+                "name": "Mohamed Sherif",
+                "position": "Forward",
+                "goals": 15,
+                "assists": 3
+            },
+            {
+                "name": "Mohamed Magdy",
+                "position": "Midfielder",
+                "goals": 8,
+                "assists": 5
+            }
+        ]
+    },
+    {
+        "name": "Wydad Casablanca",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/3/3e/Wydad_Casablanca_logo.svg",
+        "stadium": "Mohammed V Stadium",
+        "coach": "Walid Regragui",
+        "players": [
+            {
+                "name": "Saïd Benrahma",
+                "position": "Forward",
+                "goals": 10,
+                "assists": 4
+            },
+            {
+                "name": "Youssef En-Nesyri",
+                "position": "Forward",
+                "goals": 12,
+                "assists": 2
+            }
+        ]
+    },
+    {
+        "name": "TP Mazembe",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/5/5e/TP_Mazembe_logo.svg",
+        "stadium": "Stade TP Mazembe",
+        "coach": "Pamphile Mihayo",
+        "players": [
+            {
+                "name": "Salif Coulibaly",
+                "position": "Defender",
+                "goals": 2,
+                "assists": 1
+            },
+            {
+                "name": "Jackson Muleka",
+                "position": "Forward",
+                "goals": 14,
+                "assists": 3
+            }
+        ]
+    },
+    {
+        "name": "Kaizer Chiefs",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/1/1e/Kaizer_Chiefs_logo.svg",
+        "stadium": "FNB Stadium",
+        "coach": "Arthur Zwane",
+        "players": [
+            {
+                "name": "Khama Billiat",
+                "position": "Forward",
+                "goals": 9,
+                "assists": 5
+            },
+            {
+                "name": "Itumeleng Khune",
+                "position": "Goalkeeper",
+                "goals": 0,
+                "assists": 0
+            }
+        ]
+    }
+]
