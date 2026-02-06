@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Daily Sport+ Project
 
 ## Overview
@@ -101,38 +102,95 @@ Daily-sport-plus
      ```
      cd server
      npm install
-     ```
-   - For the frontend:
-     ```
-     cd client
-     npm install
-     ```
+    # Daily Sport+
 
-4. **Run the Application**:
-   - Start the backend server:
-     ```
-     cd server
-     npm run dev
-     ```
-   - Start the frontend client:
-     ```
-     cd client
-     npm start
-     ```
+    A full-stack web application for browsing football leagues, teams, matches and player statistics for the 2025/2026 season. The project includes a React frontend and an Express/MongoDB backend with sample seed data.
 
-5. **Database Seeding**:
-   - To seed the database with sample data, run:
-     ```
-     cd server
-     npm run seed
-     ```
+    ## Key Features
+    - Browse leagues, teams, matches and player stats
+    - Search, pagination and sorting for long lists
+    - Seeded dataset for the 2025/2026 season (European & African leagues)
+    - Docker-ready with `Dockerfile` and `docker-compose.yml`
 
-## Deployment
-- The application can be deployed using Docker. Use the provided `Dockerfile` and `docker-compose.yml` for containerization.
-- For cloud deployment, consider using platforms like Heroku or Vercel.
+    ## Repo Structure
+    - `client/` — React app (UI, routes, components)
+    - `server/` — Express API, Mongoose models, seed data and tests
+    - `scripts/` — helper scripts (`seed-db.sh`, `start-dev.sh`)
 
-## Contributing
-Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bug fixes.
+    ## Quick Start
 
-## License
-This project is licensed under the MIT License.
+    Prerequisites: `node` (v16+), `npm`, and optionally `docker` & `docker-compose`.
+
+    1. Install dependencies
+
+      Backend:
+      ```bash
+      cd server
+      npm install
+      ```
+
+      Frontend:
+      ```bash
+      cd client
+      npm install
+      ```
+
+    2. Create environment file
+
+      Copy the example and edit values as needed:
+      ```bash
+      cp .env.example .env
+      ```
+
+    3. Seed the database (local MongoDB required)
+
+      From the `server` folder:
+      ```bash
+      npm run seed
+      ```
+
+    4. Run locally (in separate terminals)
+
+      Start backend:
+      ```bash
+      cd server
+      npm run dev
+      ```
+
+      Start frontend:
+      ```bash
+      cd client
+      npm start
+      ```
+
+    5. Or run with Docker Compose
+
+      ```bash
+      docker-compose up --build
+      ```
+
+    ## Tests
+
+    Backend tests are under `server/tests`. Run them with:
+
+    ```bash
+    cd server
+    npm test
+    ```
+
+    Frontend tests are under `client/src/__tests__` and can be run with:
+
+    ```bash
+    cd client
+    npm test
+    ```
+
+    ## Contributing
+    - Fork the repo, create a feature branch, and open a pull request.
+    - Please include tests for new features and follow existing code style.
+
+    ## License
+    This project is offered under the MIT License. See `LICENSE` if present.
+
+    ## Contact
+    If you need help, open an issue or contact the repository owner.
